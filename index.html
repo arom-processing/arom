@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>AROM - Distributed processing framework based on Data Flow Graphs (DFG)</title>
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+        
+        <link rel="shortcut icon" href="favicon.ico">
+
+	<!--[if lt IE 9]>
+		<link rel="stylesheet" href="stylesheets/ie.css">
+	<![endif]-->
+
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-43704728-1', 'arom-processing.org');
+  ga('send', 'pageview');
+
+</script>
+</head>
+<body>
+
+	<!-- container -->
+	<div class="container">
+
+		<div class="row">
+			<div class="four columns">
+				<img src="images/arom.jpg" alt="AROM logo" />
+			</div>			
+			<div class="five columns">
+				<h2>AROM</h2>
+        <h3><abbr title="Data Flow Graph">DFG</abbr> based processing. Distributed.</h3>
+			</div>
+      <div class="two columns">
+			</div>
+    </div>
+    <hr class="spacer" />
+		<div class="row">
+			<div class="eight columns">
+        <div class="row">
+					<div class="twelve columns">
+            <dl class="nice contained tabs">
+              <dd><a href="#home" class="active">AROM Home</a></dd>
+	      <dd><a href="#sozi">BeScala presentation</a></dd>
+            </dl>
+
+            <ul class="nice tabs-content contained">
+              <li class="active" id="homeTab">
+                <h3>Welcome to AROM</h3>
+                <p class="lead">AROM is a distributed processing framework based on Data Flow Graphs (<abbr title="Data Flow Graph">DFG</abbr>). It has specifically been designed to address Big Data problems.</p>
+                <h4>Programming Model</h4>
+                <p>
+                The programming model proposed by AROM is based on directed acyclic graphs (<abbr title="Directed Acyclic Graph">DAG</abbr>). In this model, the nodes of the <abbr title="Directed Acyclic Graph">DAG</abbr> represent the operators which perform 
+                an operation on the data and the edges define the flow of the data between the operators. The AROM processing framework then schedules each of 
+                the operators contained in the <abbr title="Data Flow Graph">DFG</abbr> on the working nodes of a AROM cluster and coordinates the data transfers between the nodes. 
+                </p>
+                <h4><abbr title="Data Flow Graph">DFG</abbr> Flexibility</h4>
+                <p>
+                The AROM programming model based on <abbr title="Data Flow Graph">DFG</abbr> boasts only few constrains and offers flexibility to the user in the design of the jobs.
+                <abbr title="Data Flow Graph">DFG</abbr> models are often considered to be at a lower level than MapReduce, making it possible to directly translate MapReduce jobs into <abbr title="Data Flow Graph">DFG</abbr> and run them on a 
+                <abbr title="Data Flow Graph">DFG</abbr> framework. In this scope AROM also provides a MapReduce <abbr title="Application Programming Interface">API</abbr> allowing to run defined MapReduce jobs on the <abbr title="Data Flow Graph">DFG</abbr> framework.
+                </p>
+                <h4>Data storage</h4>
+                <p>
+                AROM preferably uses a distributed storage as source for the processed data, as it aims at co-locating a processing operator close to its data. 
+                For the moment AROM fully supports the Hadoop File System (HDFS) used by Hadoop.
+                </p>
+                <h4>Open Source</h4>
+                  <p>
+                  AROM is currently in its incubation phase within EURA NOVA (<a href="http://euranova.eu" title="EURA NOVA">http://euranova.eu</a>). Once the code is mature and stable enough, AROM will be provided via this website under the Apache Licence Version 2. If you'd like to have an early preview of the code, please take contact with <a href="http://euranova.eu" title="EURA NOVA">EURA NOVA</a>.
+                  </p>                
+              </li>
+              <li id="soziTab">
+                <h3>Learn more about AROM</h3>
+                <p class="lead">AROM has been presented to the <a href="http://www.bescala.org/">BeScala</a> in November 2012. The presentation used for this occasion is published hereinafter.</p>
+		<p>To fully enjoy this presentation, you'll need a navigator that supports the svg format.</p>
+		<iframe class="twelve columns" src="arom-presentation.svg"></iframe>
+		<p>You can also access the <a href="arom-presentation.svg" target="_blank">full size arom presentation</a>.</p>
+              </li>
+
+            </ul>
+					</div>
+				</div>
+			</div>
+      <div class="four columns">
+        <div class="row">
+          <div class="panel">
+            <h4>Build on academic research</h4>
+            <p>AROM is the continuation of the master thesis of Arthur Lesuisse, then student at the Université Libre de Bruxelles (ULB), Brussels, Belgium.</p>
+            <p>For more information, you can read the full master thesis that lead to AROM:</p>
+            <p><a href="docs/Data_processing_with_Pig_Latin_2011.pdf" class="nice radius medium purple button">Download "Data processing with Pig Latin"</a></p>
+           </div>
+        </div>
+      </div>
+      </div>
+      <div class="row ">
+        <div class="twelve columns">
+          <hr />
+        </div>
+      </div>
+      <div class="row footer">
+        <div class="four columns">
+            <h5>About</h5>
+            <p>AROM is an Open Source project backed up by <a href="http://euranova.eu">EURA NOVA</a>.</p>
+        </div>
+        <div class="four columns">
+            <h5>Licence</h5>
+            <p>AROM will soon be released under the Apache Licence version 2. Stay tuned!</p>
+        </div>
+        <div class="four columns">
+        </div>
+      </div>
+		</div>
+    
+    <div id="MLSub" class="reveal-modal">
+      <h2>Want to join the discussion?</h2>
+      <p class="lead">Two possibilities:</p>
+      <p><a href="http://groups.google.com/group/roq-messaging" class="nice radius large white button">Go to the google group page</a></p>
+      <p>or</p>
+      <form class="nice" action="http://groups.google.com/group/roq-messaging/boxsubscribe" target="_blank">
+        <input type="text" name="email" placeholder="Enter Your Email" class="small input-text">
+        <input type="submit" name="sub" value="Subscribe directly" class="nice radius large white button">
+      </form>
+      <a class="close-reveal-modal">&#215;</a>
+    </div>
+
+	<!-- Included JS Files -->
+	<script src="javascripts/foundation.js"></script>
+	<script src="javascripts/app.js"></script>
+
+</body>
+</html>
+
+

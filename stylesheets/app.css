@@ -1,0 +1,55 @@
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+@import url(http://fonts.googleapis.com/css?family=Varela+Round);
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+
+/* Nice tabs are purple! */
+.nice.tabs dd a.active { border-top: 3px solid #c70100; }
+
+/* Nice purple buttons */
+.purple.button			{ background-color: #c70100}
+.nice.purple.button		{ border: 1px solid #820100;  }
+.purple.button:hover, .purple.button:focus		{ background-color: #820100; 	}
+
+hr.spacer{
+  visibility: hidden;
+}
+/* Titles */
+h2, h3{
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 700;
+}
+h4 { font-weight: normal; font-size: 1.2em; margin-bottom: 6px; }
+h5 { font-weight: bold; font-size: 1em }
+
+a{
+  color: #c70100;
+}
+a:hover {
+  color: #820100;
+}
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+
+
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+
